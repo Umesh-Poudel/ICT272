@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+
+namespace ListExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Person> persons = new List<Person>();
+            Console.Write(" ~~~ Registration ~~~\n\n");
+
+            while (true)
+            {
+                // Add Person
+                Console.Write("Enter name: ");
+                string name = Console.ReadLine();
+
+                Console.Write("Enter age: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+
+                Person p1 = new Person(name, age);
+
+                persons.Add(p1);
+
+                Console.WriteLine("\n\tPerson added: {0}",p1.Name);
+
+
+                Console.WriteLine("\nAdd another person (Y/y)? ");
+                string resp = Console.ReadLine();
+
+                if (resp.ToUpper() != "Y")
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine("\n\nRegistered Users:\n");
+            //Show list of persons
+            foreach (Person p in persons)
+            {
+                Console.WriteLine("{0} is {1} years old!", p.Name, p.Age);
+
+            }
+
+            Console.WriteLine("\n\nPress any key to exit...");
+            Console.Read();
+        }
+    }
+}
