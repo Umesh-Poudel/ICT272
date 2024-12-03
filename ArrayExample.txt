@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ListExample
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write(" ~~~ Registration ~~~\n\n");
+            Console.Write("How many persons to register ? : ");
+            int count = Convert.ToInt32(Console.ReadLine());
+
+            string[] names = new string[count];
+            int[] ages = new int[count];
+
+            for (int i = 0; i < count; i++)
+            {
+
+                Console.Write("\nEnter name: ");
+                string name = Console.ReadLine();
+                names[i] = name;
+
+                Console.Write("\nEnter age: ");
+                int age = Convert.ToInt32(Console.ReadLine());
+                ages[i] = age;
+
+                Console.WriteLine("\n\t\t{0} added \n",name);
+            }
+
+            Console.WriteLine("\n\nRegistered Users:\n");
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("{0} is {1} years old!", names[i], ages[i]);
+
+            }
+
+            Console.WriteLine("\n\nPress any key to exit...");
+            Console.Read();
+        }
+
+
+    }    
+}
