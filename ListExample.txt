@@ -8,7 +8,7 @@ namespace ListExample
         static void Main(string[] args)
         {
             List<Person> persons = new List<Person>();
-            Console.Write(" ~~~ Registration ~~~\n\n");
+            Console.Write(" ~~~ People Registration ~~~\n\n");
 
             while (true)
             {
